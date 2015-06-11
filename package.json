@@ -1,0 +1,29 @@
+{
+  "name": "vital",
+  "version": "1.0.0",
+  "description": "Test job",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanowski/vital.git"
+  },
+  "author": "Ivan Baranov",
+  "license": "ISC",
+  "dependencies": {
+      "requirejs": "latest",
+      "gulp": "latest",
+      "gulp-less": "latest",
+      "gulp-load-plugins": "latest",
+      "gulp-inject": "latest",
+      "gulp-watch": "latest",
+      "gulp-nodemon": "latest",
+      "gulp-sourcemaps": "latest",
+      "browserify": "latest",
+      "jquery": "latest",
+      "backbone": "latest",
+      "bootstrap": "latest",
+      "hogan": "latest",
+      "vinyl-source-stream": "latest",
+      "browser-sync": "latest",
+      "express": "latest"
+   }
+}

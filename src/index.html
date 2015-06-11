@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+    <title>Vital</title>
+    <meta charset="UTF-8">
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+<body>
+    <header class="row">
+        <div class="column-2">
+            <div class="logo"></div>
+        </div>
+        <div class="column-8">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Search for a company, people, or anything else..."/>
+        </div>
+        <div class="column-3">
+            <ul class="header-links">
+                <li class="header-links-item">Biotech Vizualisation</li>
+                <li class="header-links-item">News</li>
+                <li class="header-links-item">
+                    <span class="icon icon_settings"/>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav class="row">
+        <div class="column-2"></div>
+        <div class="column-8">
+            <ul class="nav-menu">
+                <li class="nav-menu-item">OVERVIEW</li>
+                <li class="nav-menu-item">COMPANIES</li>
+                <li class="nav-menu-item">PEOPLE</li>
+            </ul>
+        </div>
+    </nav>
+    <section class="row">
+        <aside class="column-2">
+            <div class="filter-group" data-js="filters">
+                <h2>Clinical Trials</h2>
+                <div class="filter">
+                    <label>Phase</label>
+                    <div class="control">
+                        <select data-js="filter-phases" class="form-control form-control_light" multiple>
+                            <option value="1">Phase 1</option>
+                            <option value="2">Phase 2</option>
+                            <option value="3">Phase 3</option>
+                            <option value="4">Phase 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter">
+                    <label>Status</label>
+                    <div class="control">
+                        <select data-js="filter-statuses" class="form-control form-control_light" multiple>
+                            <option value="completed">Completed</option>
+                            <option value="terminated">Terminated</option>
+                            <option value="recruiting">Recruiting</option>
+                            <option value="suspended">Suspended</option>
+                            <option value="withheld">Withheld</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter">
+                    <label>Amount</label>
+                    <div class="control">
+                        <input data-js="filter-amount"/>
+                    </div>
+                </div>
+                <div class="filter">
+                    <div class="control">
+                        <input type="date" class="form-control form-control_light" data-js="datepicker"/>
+                    </div>
+                </div>
+                <div class="filter">
+                    <label>Investigators</label>
+                    <div class="control">
+                        <input type="text" class="form-control form-control_rect"/>
+                    </div>
+                </div>
+                <div class="filter">
+                    <label>Keyword</label>
+                    <div class="control">
+                        <input type="text" class="form-control form-control_rect"/>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="column-11">
+            <div class="content" data-js="data">
+                <script type="text/html" data-js="companies-list-template">
+                    {{#list}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>
+                            <span class="score"/>
+                        </td>
+                        <td>{{status}}</td>
+                        <td>{{people_count}}</td>
+                        <td>{{patents_count}}</td>
+                        <td>{{application_count}}</td>
+                        <td>{{articles_count}}</td>
+                        <td>{{clinical_trials_count}}</td>
+                        <td>{{grant_count}}</td>
+                    </tr>
+                    {{/list}}
+                </script>
+                <h1 class="content-header">Companies</h1>
+                <table class="data-table">
+                    <thead>
+                        <tr class="data-table-head">
+                            <th>Name</th>
+                            <th>Vital Score</th>
+                            <th>Status</th>
+                            <th>People</th>
+                            <th>Patents</th>
+                            <th>Applic.</th>
+                            <th>Articles</th>
+                            <th>Cl. Trials</th>
+                            <th>Grants</th>
+                        </tr>
+                    </thead>
+                    <tbody data-js="companies-list"></tbody>
+                </table>
+                <div class="load-more">
+                    More...
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- inject:js -->
+    <!-- endinject -->
+</body>
+</html>
